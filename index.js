@@ -46,63 +46,6 @@
       }
     ];
 
-    const products = [
-      {
-        id: 1,
-        productName: "Product 1",
-        brandName: "L'Oréal",
-        price: 20.99,
-        shortDescription: "This is a short description for Product 1.",
-        rating: 4.5,
-        imageURL: "https://example.com/product1-image"
-      },
-      {
-        id: 2,
-        productName: "Product 2",
-        brandName: "Estée Lauder",
-        price: 34.99,
-        shortDescription: "This is a short description for Product 2.",
-        rating: 4.2,
-        imageURL: "https://example.com/product2-image"
-      },
-      {
-        id: 3,
-        productName: "Product 3",
-        brandName: "Chanel",
-        price: 45.99,
-        shortDescription: "This is a short description for Product 3.",
-        rating: 4.7,
-        imageURL: "https://example.com/product3-image"
-      },
-      {
-        id: 4,
-        productName: "Product 4",
-        brandName: "Dior",
-        price: 55.99,
-        shortDescription: "This is a short description for Product 4.",
-        rating: 4.8,
-        imageURL: "https://example.com/product4-image"
-      },
-      {
-        id: 5,
-        productName: "Product 5",
-        brandName: "Urban Decay",
-        price: 28.99,
-        shortDescription: "This is a short description for Product 5.",
-        rating: 4.4,
-        imageURL: "https://example.com/product5-image"
-      },
-      {
-        id: 6,
-        productName: "Product 6",
-        brandName: "Dove",
-        price: 19.99,
-        shortDescription: "This is a short description for Product 6.",
-        rating: 4.0,
-        imageURL: "https://example.com/product6-image"
-      }
-    ];
-
     const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
     const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.eqvmyxo.mongodb.net/?retryWrites=true&w=majority`;
 
