@@ -77,6 +77,15 @@
         res.send(filteredProducts);
   
     });
+
+    app.get('/products/:brandName/:id', async (req, res) => {
+      const brandName = req.params.brandName;
+      const id = req.params.id;
+      const query = {_id: new ObjectId(id),brandName: brandName,};
+      const result = await ProductCollection.findOne(query);
+      res.send(result || 'Product not found');
+    });
+    
     
 
 
