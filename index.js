@@ -92,6 +92,11 @@
       const result = await CartCollection.insertOne(cart);
       res.send(result)
     })
+
+    app.get('/cart', async(req,res) => {
+      const result = await CartCollection.find().toArray()
+      res.send(result)
+    })
     
 
 
