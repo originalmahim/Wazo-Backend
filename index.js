@@ -59,6 +59,7 @@
     });
 
     const ProductCollection = client.db("Productsfile").collection("ProductsCollection")
+    const CartCollection = client.db("Cartfile").collection("CartCollection")
 
     app.get('/products', async(req,res) => {
       const result = await ProductCollection.find().toArray()
@@ -86,6 +87,11 @@
       res.send(result || 'Product not found');
     });
     
+    app.post('/cart', async(req,res) => {
+      const cart = req.body;
+      const result = await CartCollection.insertOne(cart);
+      res.send(result)
+    })
     
 
 
