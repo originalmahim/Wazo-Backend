@@ -97,6 +97,15 @@
       const result = await CartCollection.find().toArray()
       res.send(result)
     })
+
+    app.get('/cart/:id', async(req,res) => {
+      const product = req.params.id;
+      const queary = {_id: new ObjectId(product)}
+      const result = await CartCollection.findOne(queary);
+      res.send(result)
+    } )
+
+    
     
 
 
